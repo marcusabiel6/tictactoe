@@ -54,43 +54,12 @@
       return combos.some(c=>board[c[0]]!=='' && board[c[0]]===board[c[1]] && board[c[1]]===board[c[2]]);
     }
 
-    function resetGame(){
+   function resetGame(){
       board = Array(9).fill('');
       currentPlayer='X';
       statusDiv.textContent = `Player ${currentPlayer}'s turn`;
       createBoard();
-    }
-
     createBoard();
-    <!-- how to play section -->
-<div id="howtoplay">
-  <h2>how to play</h2>
-  <p>here are the basic instructions for this game:</p>
-  <ul>
-    <li>each player takes turns making moves.</li>
-    <li>click at the board to make your moves.</li>
-    <li>if you make a straight or diagonal line with your symbol, you win.</li>
-    <li>the game ends automatically when no more moves are available or the win condition is met.</li>
-    <li>strategy, planning ahead and using your opponents moves as an opportunoty to win is how you win.</li>
-  </ul>
-</div>
-
-<!-- optional CSS to style it nicely -->
-<style>
-  #howtoplay {
-    max-width: 500px;
-    margin-top: 50px;
-    padding: 20px;
-    border: 2px solid #333;
-    border-radius: 10px;
-    background-color: #f0f0f0;
-  }
-  #howtoplay h2 {
-    margin-top: 0;
-    font-size: 1.5em;
-  }
-  #howtoplay ul {
-    padding-left: 20px;
   }
 </style>
 
