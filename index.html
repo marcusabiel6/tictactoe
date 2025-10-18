@@ -12,14 +12,14 @@
   </style>
 </head>
 <body>
-  <h1>Tic-Tac-Toe</h1>
+  <h1>tic tac toe (by Marcus)</h1>
   <div id="board"></div>
-  <div id="status">Player X's turn</div>
-  <button onclick="resetGame()">Restart</button>
+  <div id="status">player O's turn</div>
+  <button onclick="resetGame()">retry</button>
 
   <script>
     let board = Array(9).fill('');
-    let currentPlayer = 'X';
+    let currentPlayer = 'O';
     const boardDiv = document.getElementById('board');
     const statusDiv = document.getElementById('status');
 
@@ -42,7 +42,7 @@
       if(checkWinner()){
         statusDiv.textContent = `Player ${currentPlayer} wins!`;
       } else if(board.every(c=>c!==''))
-        statusDiv.textContent = "It's a draw!";
+        statusDiv.textContent = "draw. press retry button to well.. retry";
       else{
         currentPlayer = currentPlayer==='X'?'O':'X';
         statusDiv.textContent = `Player ${currentPlayer}'s turn`;
