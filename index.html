@@ -40,12 +40,12 @@
       board[i]=currentPlayer;
       createBoard();
       if(checkWinner()){
-        statusDiv.textContent = ` ${currentPlayer} won. press retry button to well... retry`;
+        statusDiv.textContent = ` ${currentPlayer} won. press retry button to well... retry.`;
       } else if(board.every(c=>c!==''))
-        statusDiv.textContent = "draw. press retry button to well.. retry";
+        statusDiv.textContent = "draw. press retry button to well.. retry.";
       else{
         currentPlayer = currentPlayer==='X'?'O':'X';
-        statusDiv.textContent = `Player ${currentPlayer}'s turn`;
+        statusDiv.textContent = `Player ${currentPlayer}'s turn.`;
       }
     }
 
